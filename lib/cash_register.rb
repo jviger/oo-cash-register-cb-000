@@ -12,7 +12,9 @@ class CashRegister
   end
   
   def add_item(title, price,quantity=1)
-    @items.push(title)
+    title.times do |x|
+      @items.push(x)
+    end
     @total += price * quantity
   end
   
